@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function somar(primeiro_numero, segundo_numero) {
+            return primeiro_numero + segundo_numero;
+        }
+
+        const multiplicar = function (primeiro_numero, segundo_numero) {
+            return primeiro_numero * segundo_numero;
+        };
+
+        const dividir = (primeiro_numero, segundo_numero) => primeiro_numero / segundo_numero;
+
+        const Subtrair = function(primeiro_numero, segundo_numero) {
+        this.primeiro_numero = primeiro_numero;
+        this.segundo_numero = segundo_numero;
+        this.resultado = function() {
+            return this.primeiro_numero - this.segundo_numero;
+        };
+        }
+
+        const subtracao = new Subtrair(100, 10);
+
+        console.log(somar(100, 10), multiplicar(100, 10), dividir(100, 10), subtracao.resultado());
+
+    </script>
+</body>
+</html>
