@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia CX - JavaScript</title>
+</head>
+<body>
+    <script>
+            let primeiroNumero = 100;
+            let segundoNumero = 10;
+
+            // Função tradicional
+            function somar(a, b) {
+                return a + b;
+            }
+
+            // Função anônima
+            let multiplicar = function (a, b) {
+                return a * b;
+            };
+
+            // Função arrow
+            let dividir = (a, b) => {
+                return a / b;
+            };
+
+            // Função construtora
+            function Subtrair(a, b) {
+                this.resultado = a - b;
+            }
+
+            let subtrair = new Subtrair(primeiroNumero, segundoNumero);
+
+            console.log(`A soma é: ${somar(primeiroNumero, segundoNumero)}`);
+            console.log(`A multiplicação é: ${multiplicar(primeiroNumero, segundoNumero)}`);
+            console.log(`A divisão é: ${dividir(primeiroNumero, segundoNumero)}`);
+            console.log(`A subtração é: ${subtrair.resultado}`);
+    </script>
+    
+</body>
+</html>
