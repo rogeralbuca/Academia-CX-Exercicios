@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia CX - JavaScript</title>
+</head>
+<body>
+    <script>
+        var pessoa = {
+            id: 666,
+            nome: 'Igor',
+            sobrenome: 'Filgueira',
+            email: 'igor@email.com',
+            celular: '99999-7777',
+            nomeCompleto: function () {
+                return this.nome + ' ' + this.sobrenome;
+            }
+        };
+
+        // Desconstrução
+        var { id, email, nomeCompleto, ...objeto } = pessoa;
+
+        console.log(`ID: ${id}`);
+        console.log(`E-mail: ${email}`);
+        console.log(`Nome completo: ${nomeCompleto.call(pessoa)}`);
+        console.log(`Objeto:`, objeto);
+    </script>
+    
+</body>
+</html>

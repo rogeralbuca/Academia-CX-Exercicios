@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia CX - JavaScript</title>
+</head>
+<body>
+    <script>
+        let carros = [];
+
+        // Adiciona itens ao array
+        carros.push(
+        "Saab",
+        "Volvo",
+        "BMW",
+        "FIAT",
+        "Volkswagen",
+        "GM",
+        "Hyundai"
+        );
+
+        // Remove o primeiro item
+        carros.shift();
+
+        // Remove o último item
+        carros.pop();
+
+        // Desconstrução
+        let [primeiroCarro, ...restoDosCarros] = carros;
+
+        console.log(`O primeiro carro é: ${primeiroCarro}`);
+        console.log(`Os outros carros são: ${restoDosCarros}`);
+    </script>
+    
+</body>
+</html>
