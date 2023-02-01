@@ -10,15 +10,11 @@
     <script>
         const comprimento = 10;
         const altura = 15;
+
+        let calcularArea = (altura, comprimento) => altura * comprimento;
+
+        let calcularPerimetro = (altura, comprimento) => 2 * (altura + comprimento);
         
-        function calcularArea(altura, comprimento) {
-            return altura * comprimento;
-        }
-
-        function calcularPerimetro(altura, comprimento) {
-            return 2 * (altura + comprimento);
-        }
-
         console.log(calcularArea(altura, comprimento));
         console.log(calcularPerimetro(altura, comprimento));
     </script>
