@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05</title>
+</head>
+<body>
+    <script>
+        let A = 100;
+        let B = 10;
+
+        function soma(A,B){
+            console.log(`Soma = ${A + B}`)
+        }
+        let divisao = (A,B) =>{
+           return A/B
+        }
+        let multiplicacao = function(A,B){
+           return A*B
+        }
+        function subtracao(A,B){
+            this.A = A,
+            this.B = B;
+
+            this.resultado = this.A - this.B;
+        }
+
+        soma(A,B);
+        console.log(`Divisao = ${divisao(A,B)}`)
+        console.log(`Multiplicacao = ${multiplicacao(A,B)}`)
+        console.log(`Subtracao = ${new subtracao(A,B).resultado}`)
+    </script>
+</body> 
+</html>
