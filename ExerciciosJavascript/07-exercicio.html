@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 07 - Javascript Academia Cx</title>
+  </head>
+  <body>
+    <script>
+      let marcas = [];
+
+      marcas.push(
+        "Saab",
+        "Volvo",
+        "BMW",
+        "Fiat",
+        "Volkswagen",
+        "GM",
+        "Hyundai"
+      );
+
+      console.log(marcas);
+
+      marcas.shift();
+
+      console.log(marcas);
+
+      marcas.pop();
+
+      console.log(marcas);
+
+      let [primeiroItem, ...rest] = marcas;
+
+      console.log(primeiroItem, rest);
+    </script>
+  </body>
+</html>
