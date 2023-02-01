@@ -14,10 +14,10 @@
 
     const objeto = {
       id: "1",
-      nome: "José",
-      sobrenome: "Silva",
-      email: "josesilva@gmail.com",
-      celular: "41 99999-88888",
+      nome: "Michael",
+      sobrenome: "Scott",
+      email: "mike@theoffice.com",
+      celular: "202-555-0154",
 
       nomeCompleto() {
         return `${this.nome} ${this.sobrenome}`;
@@ -25,12 +25,12 @@
 
     };
 
-    const { nome, sobrenome, nomeCompleto, celular, ...resto } = objeto
+    const { id, email, nomeCompleto, ...resto } = objeto
 
     console.log(id);
     console.log(email);
-    console.log(nomeCompleto.call(objeto))
-    console.log(objeto)
+    console.log(nomeCompleto.call(objeto));
+    console.log(objeto);
 
   </script>
 </body>
