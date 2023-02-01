@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number1 = 100;
+      let number2 = 10;
+
+      function soma(a, b) {
+        return a + b;
+      }
+
+      var multiplicar = function (a, b) {
+        return a * b;
+      };
+
+      const dividir = (a, b) => {
+        return a / b;
+      };
+      function Subtrair(a, b) {
+        this.resultado = a - b;
+      }
+
+      let subtracao = new Subtrair(number1, number2);
+      console.log(soma(number1, number2));
+      console.log(multiplicar(number1, number2));
+      console.log(dividir(number1, number2));
+      console.log(subtracao.resultado);
+    </script>
+  </body>
+</html>
