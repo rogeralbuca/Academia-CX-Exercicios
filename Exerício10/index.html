@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício10</title>
+</head>
+
+<body>
+
+  <script>
+
+    const montadoras = [
+      { nome: 'Harley-Davidson', estado: 'Paraná' },
+      { nome: 'CAOA', estado: 'Santa Catarina' },
+      { nome: 'Hyundai', estado: 'Amapá' },
+      { nome: 'Mercedes-Benz', estado: 'Rio Grande do Sul' },
+      { nome: 'Renault', estado: 'Rio Grande do Norte' },
+      { nome: 'Caterpillar', estado: 'São Paulo' },
+      { nome: 'Jeep', estado: 'Mato Grosso' },
+      { nome: 'Jaguar', estado: 'Bahia' },
+      { nome: 'Agrale', estado: 'Pernambuco' },
+      { nome: 'BMW', estado: 'Goiás' }
+    ];
+
+    // Função para encontrar a montadora que fica em São Paulo
+    let findSp = ((e) => {
+
+      if (e.estado === 'São Paulo') {
+        console.log('A montadora Caterpillar está localizada no Estado de São Paulo');
+      }
+
+    });
+
+    // Função para ordenar de forma crescente o array de objetos 
+    let ordenar = ((atual, proximo) => {
+      if (atual.nome < proximo.nome) {
+        return -1;
+      } else if (atual.nome > proximo.nome) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+
+    montadoras.sort(ordenar);
+
+    montadoras.forEach((montadora, index) => {
+      console.log(index + 1 + " - " + montadora.nome);
+    });
+
+    console.log(montadoras.forEach(findSp))
+
+  </script>
+
+</body>
+
+</html>
