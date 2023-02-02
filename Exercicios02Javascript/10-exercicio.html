@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 10 - Javascript Academia Cx</title>
+  </head>
+  <body>
+    <script>
+      let montadoras = [
+        { name: "Harley-Davidson", estado: "Rio de Janeiro" },
+        { name: "CAOA Hyundai", estado: "Pernambuco" },
+        { name: "Mercedez-Benz", estado: "Coritiba" },
+        { name: "Renault", estado: "Parana" },
+        { name: "Caterpillar", estado: "São Paulo" },
+        { name: "Jeep", estado: "Amazonas" },
+        { name: "Jaguar", estado: "Piaui" },
+        { name: "Agrale", estado: "Bahia" },
+        { name: "BMW", estado: "Maranhão" },
+      ];
+
+      montadoras.sort();
+
+      montadoras.forEach(function (montar, index) {
+        console.log(index + 1 + " - " + montar.name);
+      });
+
+      montadoras.estado = "São Paulo";
+
+      switch (montadoras.estado) {
+        case "Rio de Janeiro":
+          console.log(
+            `A montadora ${montadoras[0].name} esta localizada no Estado de ${montadoras[0].estado}`
+          );
+          break;
+        case "Pernambuco":
+          console.log(
+            `A montadora ${montadoras[1].name} esta localizada no Estado de ${montadoras[1].estado}`
+          );
+          break;
+        case "Coritiba":
+          console.log(
+            `A montadora ${montadoras[2].name} esta localizada no Estado de ${montadoras[2].estado}`
+          );
+          break;
+        case "Parana":
+          console.log(
+            `A montadora ${montadoras[3].name} esta localizada no Estado de ${montadoras[3].estado}`
+          );
+          break;
+        case "São Paulo":
+          console.log(
+            `A montadora ${montadoras[4].name} esta localizada no Estado de ${montadoras[4].estado}`
+          );
+          break;
+        case "Amazonas":
+          console.log(
+            `A montadora ${montadoras[5].name} esta localizada no Estado de ${montadoras[5].estado}`
+          );
+          break;
+        case "Piaui":
+          console.log(
+            `A montadora ${montadoras[6].name} esta localizada no Estado de ${montadoras[6].estado}`
+          );
+          break;
+        case "Bahia":
+          console.log(
+            `A montadora ${montadoras[7].name} esta localizada no Estado de ${montadoras[7].estado}`
+          );
+          break;
+        case "Maranhão":
+          console.log(
+            `A montadora ${montadoras[8].name} esta localizada no Estado de ${montadoras[8].estado}`
+          );
+          break;
+
+        default:
+          console.log(`Estado digitado não encontrado`);
+          break;
+      }
+    </script>
+  </body>
+</html>

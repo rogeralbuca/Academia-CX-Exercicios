@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 09 - Javascript Academia Cx</title>
+  </head>
+  <body>
+    <script>
+      const MAIOR_IDADE = 18;
+
+      function Pessoa(nome, idade, signo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.signo = signo;
+      }
+
+      var pessoa = new Pessoa("Fulano", 10, "Aries");
+      var pessoa = new Pessoa("Ciclano", 20, "Lobo");
+      var pessoa = new Pessoa("Beltrano", 20, "Leão");
+
+      console.log(`Seja bem vindo ${pessoa.nome}`);
+
+      if (pessoa.idade > MAIOR_IDADE) {
+        switch (pessoa.signo) {
+          case "Aries":
+            console.log(
+              "Seu intervalo de nascimento: Áries de 21 de março a 20 de abril"
+            );
+            break;
+          case "Gemeos":
+            console.log(
+              "Seu intervalo de nascimento: Gemeos de 21 de maio a 20 de junho"
+            );
+            break;
+          case "Leão":
+            console.log(
+              "Seu intervalo de nascimento: Leão de 23 de julho a 22 de agosto"
+            );
+            break;
+          case "Libra":
+            console.log(
+              "Seu intervalo de nascimento: Libra de 23 de setembro a 22 de outubro"
+            );
+            break;
+          case "Sagitario":
+            console.log(
+              "Seu intervalo de nascimento: Sagitario de 22 de novembro a 21 de dezembro"
+            );
+            break;
+          case "Aquario":
+            console.log(
+              "Seu intervalo de nascimento: Aquario de 21 de janeiro a 18 de fevereiro"
+            );
+            break;
+          case "Touro":
+            console.log(
+              "Seu intervalo de nascimento: Touro de 21 de abril a 20 de maio"
+            );
+            break;
+          case "Cancer":
+            console.log(
+              "Seu intervalo de nascimento: Cancer de 21 de junho a 22 de julho"
+            );
+            break;
+          case "Virgem":
+            console.log(
+              "Seu intervalo de nascimento: Virgem de 23 de agosto a 22 de setembro"
+            );
+            break;
+          case "Escorpião":
+            console.log(
+              "Seu intervalo de nascimento: Escorpião de 23 de outubro a 21 de novembro"
+            );
+            break;
+          case "Capricornio":
+            console.log(
+              "Seu intervalo de nascimento: Capricornio de 22 de dezembro a 20 de janeiro"
+            );
+            break;
+          case "Peixes":
+            console.log(
+              "Seu intervalo de nascimento: Peixes de 19 de fevereiro a 20 de março"
+            );
+            break;
+          default:
+            console.log(
+              `Seu intervalo de nascimento: Signo ${pessoa.signo} não registrado`
+            );
+            break;
+        }
+      } else {
+        console.log(`somente para maiores de idade`);
+      }
+    </script>
+  </body>
+</html>
