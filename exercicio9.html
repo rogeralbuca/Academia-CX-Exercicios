@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const MAIOR_IDADE = 18;
+
+        function maioridade(idade) {
+            return idade >= MAIOR_IDADE;
+        }
+
+        function birthInterval(signo) {
+            switch (signo) {
+                case "Áries":
+                    return "De 21 março a 19 de abril";
+                case "Touro":
+                    return "De 20 de abril a 20 de maio";
+                case "Gêmeos":
+                    return "De 21 de maio a 20 de junho";
+                case "Câncer":
+                    return "De 21 de junho a 22 de julho";
+                case "Leão":
+                    return "De 23 de julho a 22 de agosto";
+                case "Virgem":
+                    return "De 23 de agosto a 22 de setembro";
+                case "Libra":
+                    return "De 23 de setembro a 22 de outubro";
+                case "Escorpião":
+                    return "De 23 de outubro a 21 de novembro";
+                case "Sagitário":
+                    return "De 22 de novembro a 21 de dezembro";
+                case "Capricórnio":
+                    return "De 22 de dezembro a 19 de janeiro";
+                case "Aquário":
+                    return "De 20 de janeiro a 18 de fevereiro";
+                case "Peixes":
+                    return "De 19 de fevereiro a 20 de março";
+                default:
+                    return `Signo ${signo} não registrado`;
+            }
+        }
+
+        function verifyUser(nome, idade, signo) {
+            console.log(`Seja bem-vindo ${nome}`);
+            console.log(
+                maioridade(idade)
+                    ? `Seu intervalo de nascimento: ${birthInterval(signo)}`
+                    : "Somente para maiores de idade"
+            );
+        }
+
+        verifyUser("Fulano", 17, "Capricórnio");
+        verifyUser("Ciclano", 19, "Lobo");
+        verifyUser("Beltrano", 23, "Leão");
+
+    </script>
+</body>
+
+</html>
