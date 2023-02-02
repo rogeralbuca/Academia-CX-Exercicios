@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const montadoras = [
+        { nome: 'Harley-Davidson', localidade: 'Rio de Janeiro' },
+        { nome: 'Caoa Hyundai', localidade: 'Paraná' },
+        { nome: 'Mercedes-Benz', localidade: 'Rio de Janeiro' },
+        { nome: 'Renault', localidade: 'Paraná' },
+        { nome: 'Catterpillar', localidade: 'São Paulo' },
+        { nome: 'Jeep', localidade: 'Rio de Janeiro' },
+        { nome: 'Jaguar', localidade: 'Rio de Janeiro' },
+        { nome: 'Aragale', localidade: 'Paraná' },
+        { nome: 'BMW', localidade: 'Santa Catarina' },
+      ];
+
+      const montadoraOrdenadas = montadoras.map((montadoras) => {
+        return montadoras.nome;
+      });
+
+      montadoraOrdenadas.sort();
+      montadoraOrdenadas.forEach((montadora, i) => {
+        console.log(`${i + 1} - ${montadora}`);
+      });
+
+      montadoras.forEach((montadora) => {
+        const { nome, localidade } = montadora;
+        if (montadora.localidade === 'São Paulo') {
+          console.log(
+            `A montadora ${nome} está localiza no estado de ${localidade}`
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
