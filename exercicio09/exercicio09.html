@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+<body>
+    <script>
+        const MAIOR_IDADE = 18;
+
+        
+        function Pessoa(nome, idade, signo) {
+        this.nome = nome;
+        this.idade = idade;
+        this.signo = signo;
+        }
+
+
+        const maioridade = idade => idade >= MAIOR_IDADE;
+
+
+        const intervaloSigno = signo => {
+            switch (signo) {
+                case "Áries":
+                    return "de 21 março a 20 abril";
+
+                case "Touro":
+                    return "de 21 abril a 20 maio";
+
+                case "Gêmeos":
+                    return "de 21 maio a 20 junho";
+
+                case "Câncer":
+                    return "de 21 junho a 22 julho";
+
+                case "Leão":
+                    return "de 23 julho a 22 agosto";
+
+                case "Virgem":
+                    return "de 23 agosto a 22 setembro";
+
+                case "Libra":
+                    return "de 23 setembro a 22 outubro";
+
+                case "Escorpião":
+                    return "de 23 outubro a 21 novembro";
+
+                case "Sagitário":
+                    return "de 22 novembro a 21 dezembro";
+
+                case "Capricórnio":
+                    return "de 22 dezembro a 19 janeiro";
+
+                case "Aquário":
+                    return "de 20 janeiro a 18 fevereiro";
+
+                case "Peixes":
+                    return "de 19 fevereiro a 20 março";
+
+                default:
+                    return "não registrado";
+        }
+        };
+
+
+        const pessoas = [
+            new Pessoa("Fulano", 17, "Gêmeos"),
+            new Pessoa("Ciclano", 19, "Lobo"),
+            new Pessoa("Beltrano", 25, "Leão")
+        ];
+
+
+        pessoas.forEach(pessoa => {
+            console.log(`Seja bem-vindo ${pessoa.nome}`);
+            console.log(`${maioridade(pessoa.idade) ? `Seu intervalo de nascimento: Signo ${pessoa.signo} ${intervaloSigno(pessoa.signo)}` : "Somente para maiores de idade"}`);
+        });
+    </script>
+</body>
+</html>
