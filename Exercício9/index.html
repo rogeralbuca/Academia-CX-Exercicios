@@ -15,7 +15,7 @@
     const MAIOR_IDADE = 18;
 
 
-    let maioridade = ((idade) => {
+    const maioridade = ((idade) => {
 
       return idade >= MAIOR_IDADE;
 
@@ -35,13 +35,13 @@
 
         console.log(maioridade(this.idade) ? `Seu intervalo de nascimento: ${intervaloNascimento(this.signo)}` :
           "Somente para maiores de idade");
-      }
+      };
     }
 
 
-    const fulano = new Pessoa('fulano', 15, 'Sagitário')
-    const ciclano = new Pessoa('ciclano', 28, 'Lobo')
-    const beltrano = new Pessoa('beltrano', 40, 'Leão')
+    const fulano = new Pessoa('fulano', 15, 'Sagitário');
+    const ciclano = new Pessoa('ciclano', 28, 'Lobo');
+    const beltrano = new Pessoa('beltrano', 40, 'Leão');
 
 
     let intervaloNascimento = ((signo) => {
@@ -49,67 +49,63 @@
       switch (signo) {
 
         case 'Capricórnio':
-          console.log("Seu intervalo de nascimento: 22 de Dezembro - 19 de Janeiro");
+          return "Seu intervalo de nascimento: 22 de Dezembro - 19 de Janeiro";
           break;
 
         case 'Aquário':
-          console.log("Seu intervalo de nascimento: 20 de Janeiro - 18 de Fevereiro");
+          return "Seu intervalo de nascimento: 20 de Janeiro - 18 de Fevereiro";
           break;
 
         case 'Peixes':
-          console.log("Seu intervalo de nascimento: 19 de Fevereiro - 20 de Março");
+          return "Seu intervalo de nascimento: 19 de Fevereiro - 20 de Março";
           break;
 
         case 'Áries':
-          console.log("Seu intervalo de nascimento: 21 de Março – 20 de Abril");
+          return "Seu intervalo de nascimento: 21 de Março – 20 de Abril";
           break;
 
         case 'Touro':
-          console.log("Seu intervalo de nascimento: 21 de Abril - 20 de Maio");
+          return "Seu intervalo de nascimento: 21 de Abril - 20 de Maio";
           break;
 
         case 'Gêmeos':
-          console.log("Seu intervalo de nascimento: 21 de Maio - 20 de Junho");
+          return "Seu intervalo de nascimento: 21 de Maio - 20 de Junho";
           break;
 
         case 'Câncer':
-          console.log("Seu intervalo de nascimento: 21 de Junho - 22 de Julho");
+          return "Seu intervalo de nascimento: 21 de Junho - 22 de Julho";
           break;
 
         case 'Leão':
-          console.log("Seu intervalo de nascimento: 23 de Julho - 22 de Agosto");
+          return "Seu intervalo de nascimento: 23 de Julho - 22 de Agosto";
           break;
 
         case 'Virgem':
-          console.log("Seu intervalo de nascimento: 23 de Agosto - 22 de Setembro");
+          return "Seu intervalo de nascimento: 23 de Agosto - 22 de Setembro";
           break;
 
         case 'Libra':
-          console.log("Seu intervalo de nascimento: 23 de Setembro - 22 de Outubro");
+          return "Seu intervalo de nascimento: 23 de Setembro - 22 de Outubro";
           break;
 
         case 'Escorpião':
-          console.log("Seu intervalo de nascimento: 23 de Outubro - 21 Novembro");
+          return "Seu intervalo de nascimento: 23 de Outubro - 21 Novembro";
           break;
 
         case 'Sagitário':
-          console.log("Seu intervalo de nascimento: 22 de Novembro - 21 de Dezembro");
+          return "Seu intervalo de nascimento: 22 de Novembro - 21 de Dezembro";
           break;
 
         default:
-          console.log(`Signo: ${signo} não registrado`);
+          return `Signo: ${signo} não registrado`;
           break;
       }
 
     });
 
-    // console.log(fulano.imprimePessoa());
-    // console.log(ciclano.imprimePessoa());
-    // console.log(beltrano.imprimePessoa());
-
-    fulano.imprimePessoa()
-    ciclano.imprimePessoa()
-    beltrano.imprimePessoa()
+    fulano.imprimePessoa();
+    ciclano.imprimePessoa();
+    beltrano.imprimePessoa();
 
   </script>
 
