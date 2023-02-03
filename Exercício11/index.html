@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício11</title>
+</head>
+
+<body>
+
+  <script>
+
+    class Animal {
+      constructor(especie) {
+        this.especie = especie;
+      }
+
+      caracteristica() {
+        return `É uma característica de um Animal da espécie ${this.especie}: Têm nutrição heterotrófica (são incapazes de produzir o seu próprio alimento)`;
+      }
+    }
+
+    class Mamifero extends Animal {
+      constructor(especie) {
+        super(especie);
+      }
+
+      caracteristica() {
+        return `É uma característica de um Mamifero da espécie ${this.especie}: A presença de pelos, glândulas mamárias, diafragma e dentes diferenciados`
+      }
+    }
+
+    class Cachorro extends Mamifero {
+      constructor(especie, nome) {
+        super(especie);
+        this.nome = nome;
+      }
+
+      caracteristica() {
+        console.log(`É uma característica de um Cachorro da espécie ${this.especie}: É quadrúpede (ou seja, anda sobre quatro patas)`);
+        return `O Cachorro, seu nome é ${this.nome}`;
+      }
+    }
+
+    const boto = new Animal('Boto-cor-de-rosa');
+    const lobo = new Mamifero('Lobo-guará');
+    const pastor = new Cachorro('Pastor Alemão', 'Rin-Tin-Tin');
+
+
+    console.log(boto.caracteristica());
+    console.log(lobo.caracteristica());
+    console.log(pastor.caracteristica());
+
+  </script>
+
+</body>
+
+</html>

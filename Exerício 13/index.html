@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício13</title>
+</head>
+
+<body>
+
+  <style>
+    .box {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  </style>
+
+
+  <div class="box">
+    <button onclick="apagada()">Turn off</button>
+    <img id="imagem" src="apagada.png" alt="imagem-lampada">
+
+    <button onclick="acender()">Turn on</button>
+  </div>
+
+  <script>
+
+    let acender = () => {
+      document.querySelector('#imagem').src = "acesa.png";
+    }
+
+    let apagada = () => {
+      document.querySelector('#imagem').src = "apagada.png";
+    }
+
+    let lampada = window.document.getElementById('imagem');
+
+    lampada.onclick = function (event) {
+      lampada.src.includes('apagada.png') ? lampada.src = 'acesa.png' : lampada.src = 'apagada.png';
+    }
+
+
+
+  </script>
+</body>
+
+</html>

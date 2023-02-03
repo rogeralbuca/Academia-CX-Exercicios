@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício12</title>
+</head>
+
+<body>
+
+  <script>
+
+    let numeros = [10, 20, 13, 42, 51, 7, 76, 18, 29, 27];
+
+    let resultado = numeros.reduce((acumulador, item) => {
+      let parOuImpar = item % 2 === 0 ? 'par' : 'impar';
+      acumulador[parOuImpar].push(item);
+      return acumulador;
+    }, { par: [], impar: [] });
+
+    console.log('Reduce: ', resultado);
+
+  </script>
+
+</body>
+
+</html>
