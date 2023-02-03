@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numeros = [10, 20, 13, 42, 51, 7, 76, 18, 29, 27];
+
+        const resultadoReduce = numeros.reduce((acumulador, valor) => {
+            if (valor % 2 === 0) {
+                acumulador.par.push(valor);
+            } else {
+                acumulador.impar.push(valor);
+            }
+
+            return acumulador;
+        }, { par: [], impar: [] });
+
+        console.log('Reduce:', resultadoReduce);
+
+        const resultadoFilter = numeros.filter(valor => valor % 2 !== 0);
+
+        console.log('Filter:', resultadoFilter);
+
+        const resultadoMap = numeros.map(valor => {
+            if (valor % 2 === 0) {
+                return `Par: ${valor}`;
+            } else {
+                return `Impar: ${valor}`;
+            }
+        });
+
+        console.log('Map:', resultadoMap);
+
+        const resultadoTotal = numeros.reduce((acumulador, valor) => acumulador + valor, 0);
+
+        console.log('Total:', resultadoTotal);
+    </script>
+</body>
+
+</html>

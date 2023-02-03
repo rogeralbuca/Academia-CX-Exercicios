@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="126" height="48"></canvas>
+
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var character = new Image();
+        character.src = "personagens.jpg";
+
+        var frameIndex = 0;
+        var tickCount = 0;
+        var ticksPerFrame = 5;
+        var numberOfFrames = 3;
+
+        function updateFrame() {
+            tickCount += 1;
+            if (tickCount > ticksPerFrame) {
+                tickCount = 0;
+                if (frameIndex < numberOfFrames - 1) {
+                    frameIndex += 1;
+                } else {
+                    frameIndex = 0;
+                }
+            }
+        }
+
+        function draw() {
+            updateFrame();
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(character, frameIndex * canvas.width / numberOfFrames, 0, canvas.width / numberOfFrames, canvas.height, 0, 0, canvas.width / numberOfFrames, canvas.height);
+        }
+
+        setInterval(draw, 33);
+    </script>
+</body>
+
+</html>
