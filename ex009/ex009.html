@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia CX - JavaScript</title>
+</head>
+<body>
+    <script>
+
+    const nome = "Igor";
+    const signo = "Peixes";
+    const MAIOR_IDADE = 18;
+
+    function maioridade(idade) {
+        return idade >= MAIOR_IDADE;
+    }
+
+    function intervaloNascimento(signo) {
+        switch (signo) {
+            case "Aquário":
+                return "20 de janeiro a 18 de fevereiro";
+            case "Peixes":
+                return "19 de fevereiro a 20 de março";
+            case "Áries":
+                return "21 de março a 19 de abril";
+            case "Touro":
+                return "20 de abril a 20 de maio";
+            case "Gêmeos":
+                return "21 de maio a 20 de junho";
+            case "Câncer":
+                return "21 de junho a 22 de julho";
+            case "Leão":
+                return "23 de julho a 22 de agosto";
+            case "Virgem":
+                return "23 de agosto a 22 de setembro";
+            case "Libra":
+                return "23 de setembro a 22 de outubro";
+            case "Escorpião":
+                return "23 de outubro a 21 de novembro";
+            case "Sagitário":
+                return "22 de novembro a 21 de dezembro";
+            case "Capricórnio":
+                return "22 de dezembro a 19 de janeiro";
+            default:
+                return "Signo inválido";
+        }
+    }
+
+    const idade = 25;
+    const eMaiorDeIdade = maioridade(idade) ? "é" : "não é";
+
+    console.log(
+        `${nome} ${eMaiorDeIdade} maior de idade e nasceu no intervalo de ${intervaloNascimento(signo)}`
+    );
+
+    </script>
+    
+</body>
+</html>
