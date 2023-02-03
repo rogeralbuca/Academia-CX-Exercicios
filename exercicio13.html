@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: inline-flex;
+        }
+
+        .light-bulb {
+            width: 50%;
+            text-align: center;
+        }
+
+        .lampadaapagada {
+            width: 122px;
+            height: 150px;
+            background-image: url("apagada.jpg");
+        }
+
+        .lampadaacesa {
+            width: 122px;
+            height: 150px;
+            background-image: url("acesa.jpg");
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="light-bulb">
+            <img id="bulb-1" class="lampadaapagada" onclick="switchClass(this.id)">
+        </div>
+        <div class="light-bulb">
+            <img id="bulb-2" src="apagada.jpg" onclick="switchImage(this.id)">
+        </div>
+    </div>
+    
+    <script>
+        function switchImage(id) {
+            var image = document.getElementById(id);
+            if (image.src.match("acesa.jpg")) {
+                image.src = "apagada.jpg";
+            } else {
+                image.src = "acesa.jpg";
+            }
+        }
+
+        function switchClass(id) {
+            var image = document.getElementById(id);
+            if (image.classList.contains("lampadaacesa")) {
+                image.classList.remove("lampadaacesa");
+                image.classList.add("lampadaapagada");
+            } else {
+                image.classList.remove("lampadaapagada");
+                image.classList.add("lampadaacesa");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
