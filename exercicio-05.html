@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 5</title>
+  </head>
+  <body>
+    <script>
+      const numero1 = 100;
+      const numero2 = 10;
+
+      function somar(numero1, numero1) {
+        return numero1 + numero2;
+      };
+
+      const multiplicar = function (numero1, numero2) {
+        return numero1 * numero2;
+      };
+
+      const dividir = (numero1, numero2) => numero1 / numero2;
+
+      function subtrair(numero1, numero2) {
+        this.subtracao = () => (numero1 - numero2);
+      };
+      
+
+      console.log(somar(numero1, numero2)); //soma
+      console.log(multiplicar(numero1, numero2)); //multiplicação
+      console.log(dividir(numero1, numero2)); //divisão
+      console.log(new subtrair(numero1, numero2).subtracao()); //subtração
+    </script>
+  </body>
+</html>

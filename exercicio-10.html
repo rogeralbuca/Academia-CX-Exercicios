@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 10</title>
+  </head>
+  <body>
+    <script>
+      let montadora = [
+        "Harley-Davidson",
+        "CAOA Hyundai",
+        "Mercedes-Benz",
+        "Renault",
+        "Caterpillar",
+        "Jeep",
+        "Jaguar",
+        "Agrale",
+        "BMW",
+      ];
+      let estado = "São Paulo";
+
+      montadora.sort();
+      function estaEmSaoPaulo(montadora) {
+        if (montadora === "Caterpillar") {
+          console.log(montadora + " está localizada no Estado de " + estado);
+        }
+      }
+
+      for (let i = 0; i < montadora.length; i++) {
+        console.log(`${i + 1} - ${montadora[i]}`);
+      }
+
+      for (let i = 0; i < montadora.length; i++) {
+        estaEmSaoPaulo(montadora[i]);
+      }
+    </script>
+  </body>
+</html>

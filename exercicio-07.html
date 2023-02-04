@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <script>
+        const carro = [];
+
+        carro.push("Saab", "Volvo", "BMW", "Fiat", "Volkswagen", "GM", "Hyundai");
+
+        carro.shift(); // remove o primeiro item da lista
+        carro.pop(); // remove o ultimo item da lista
+
+        const [primeiroCarro, ...resto] = carro
+
+        console.log(primeiroCarro);
+        console.log(resto);
+
+
+
+
+
+    </script>
+</body>
+</html>
