@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+    <style rel="stylesheet" type="style/css" src="exercicio13.css"></style> 
+</head>
+
+<body>
+
+    <div id="container">
+        <img class="lampada" src="lampada.jpg"/>
+        <img class="lampada" src="lampada-on.jpg"/>
+    </div>
+
+    <script>
+        var lampadas = Array.from(window.document.getElementsByClassName("lampada"));
+
+        lampadas.forEach((lampada) => {
+            lampada.onclick = (event) => {
+                event.target.src.includes("lampada.jpg") ? event.target.src = "lampada-on.jpg" : event.target.src = "lampada.jpg";
+            }
+        });
+    </script>
+
+</body>
+</html>

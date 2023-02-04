@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+    <script>
+        const montadoras = [
+            {nome: "Harley-Davidson", estado: "Amazonas"},
+            {nome: "CAOA Hyundai", estado: "Goiás"},
+            {nome: "Mercedes-Benz", estado: "Minas Gerais"},
+            {nome: "Renault", estado: "Paraná"},
+            {nome: "Caterpillar", estado: "São Paulo"},
+            {nome: "Jeep", estado: "Pernambuco"},
+            {nome: "Jaguar", estado: "Rio de Janeiro"},
+            {nome: "Agrale", estado: "Rio Grande do Sul"},
+            {nome: "BMW", estado: "Santa Catarina"}
+        ];
+
+
+        const montadorasSorted = montadoras.sort((a, b) => a.nome > b.nome ? 1 : -1);
+
+
+        montadorasSorted.forEach((montadora, index) => {
+            console.log(`${index + 1} - ${montadora.nome}`);
+        });
+
+
+        montadorasSorted.forEach(montadora => {
+            if (montadora.estado === "São Paulo") {
+                console.log(`A montadora ${montadora.nome} está localizada no Estado de ${montadora.estado}`);
+            }
+        });
+    </script>
+</body>
+</html>

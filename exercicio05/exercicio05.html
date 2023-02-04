@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+</head>
+<body>
+    <script>
+        let primeiroNumero = 100;
+        let segundoNumero = 10;
+
+        function somar(primeiroNumero, segundoNumero) {
+            return primeiroNumero + segundoNumero;
+        }
+
+        let multiplicar = function(primeiroNumero, segundoNumero) {
+            return primeiroNumero * segundoNumero;
+        }
+
+        let dividir = (primeiroNumero, segundoNumero) => primeiroNumero / segundoNumero;
+
+        function Subtracao(primeiroNumero, segundoNumero) {
+            this.primeiroNumero = primeiroNumero;
+            this.segundoNumero = segundoNumero;
+
+            this.subtrair = () => this.primeiroNumero - this.segundoNumero;
+        }
+
+        console.log(somar(primeiroNumero, segundoNumero));
+        console.log(multiplicar(primeiroNumero, segundoNumero));   
+        console.log(dividir(primeiroNumero, segundoNumero));
+        console.log(new Subtracao(primeiroNumero, segundoNumero).subtrair());
+    </script>
+</body>
+</html>
