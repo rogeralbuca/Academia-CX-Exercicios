@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 14</title>
+</head>
+
+<body>
+
+  <canvas id="canvas" width="300" height="420"></canvas>
+  <img id="imagem" src="animation.png" style="display:none;" />
+
+
+  <script>
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const image = document.getElementById("imagem");
+
+    function* animation() {
+      while (true) {
+        yield ctx.drawImage(image, 0, 0, 120, 245, 30, 0, 120, 245);
+        yield ctx.drawImage(image, 140, 0, 130, 245, 30, 0, 120, 245);
+        yield ctx.drawImage(image, 0, 245, 130, 245, 30, 0, 120, 245);
+        yield ctx.drawImage(image, 140, 245, 120, 245, 30, 0, 120, 245);
+      }
+    }
+
+    const animacao = animation();
+
+    function cycle() {
+      animacao.next();
+    }
+
+    setInterval(cycle, 180);
+
+  </script>
+</body>
+
+</html>
