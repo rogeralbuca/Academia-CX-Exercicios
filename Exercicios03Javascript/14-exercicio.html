@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 14 - Javascript Academia Cx</title>
+  </head>
+  <body>
+
+    <canvas id="canvas" width="280" height="420" ></canvas>
+    <img id="source" src="./img/animation.jpg" style="display:none;"/>
+
+
+    <script>
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const image = document.getElementById("source");
+
+        function* animation(){
+            while(true){
+                yield ctx.drawImage(image, 0, 0, 140, 220, 0, 0, 140, 220);
+                yield ctx.drawImage(image, 140, 0, 140, 220, 0, 0, 140, 220);
+                yield ctx.drawImage(image, 0, 220, 140, 220, 0, 0, 140, 220);
+                yield ctx.drawImage(image, 140, 220, 140, 220, 0, 0, 140, 220);
+            }
+        }
+
+        const animations = animation();
+
+        function cycle() {
+            animations.next();
+        }
+
+        setInterval(cycle, 100);
+
+    </script>
+
+    
+</body>
+</html>

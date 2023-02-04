@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 12 - Javascript Academia Cx</title>
+  </head>
+  <body>
+    <script>
+      let num = [10, 20, 13, 42, 51, 7, 76, 18, 29, 27];
+
+      let resultados = num.reduce(
+        (acumulador, valor) => {
+          var testePar = valor % 2 ? "impar" : "par";
+          acumulador[testePar].push(valor);
+          return acumulador;
+        },
+        { par: [], impar: [] }
+      );
+
+      console.log("Reduce", resultados);
+
+      let filterImpar = num.filter((impar) => (impar % 2 ? impar : null));
+      console.log("Filter: ", filterImpar);
+
+      var map = num.map(function (valor) {
+        return (resultado = valor % 2 ? `Impar: ${valor}` : `Par: ${valor}`);
+      });
+
+      console.log("Map: ", map);
+
+      var total = num.reduce(function (soma, i) {
+        return soma + i;
+      });
+
+      console.log(`Total: ${total}`);
+    </script>
+  </body>
+</html>

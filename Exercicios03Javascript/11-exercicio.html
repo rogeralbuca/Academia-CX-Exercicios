@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 11 - Javascript Academia Cx</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(especie, caracteristicas) {
+          this.especie = especie;
+          this.caracteristicas = caracteristicas;
+        }
+        getCaracteristicas() {
+          return this.especie + " " + this.caracteristicas;
+        }
+      }
+
+      class Mamifero extends Animal {
+        getEspecie() {
+          return this.especie;
+        }
+      }
+
+      class Cachorro extends Animal {
+        getNomeCachorro() {
+          return "O cachorro seu nome é Rin-Tin-Tin";
+        }
+      }
+
+      let boto = new Animal(
+        "É uma caracteristica de um Animal da espécie Boto-Cor-De-Rosa:",
+        "Têm nutrição heterotrófica"
+      );
+      let lobo = new Mamifero(
+        "É uma caracteristica de um Mamifero da espécie Lobo-Guará:",
+        "A presença de pelos, glândulas mamárias, diafragma e dentes diferenciados"
+      );
+      let cachorro = new Cachorro(
+        "É uma caracteristica de um Cachorro da espécie Pastor Alemão:",
+        " É quadrupede"
+      );
+
+      console.log(boto.getCaracteristicas());
+      console.log(lobo.getCaracteristicas());
+      console.log(cachorro.getCaracteristicas());
+      console.log(cachorro.getNomeCachorro());
+    </script>
+  </body>
+</html>
