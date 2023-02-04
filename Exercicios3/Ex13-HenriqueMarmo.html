@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .lampada_off {
+            width: 500px;
+            height: 500px;
+            background-image: url("lampada_off.jpg");
+        }
+
+        .lampada_on{
+            width: 500px;
+            height: 500px;
+            background-image: url("lampada_on.jpg");
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div id="lampadaA" class="lampada">
+        </div>
+        <img id="lampadaB" src="lampada_off.jpg">
+    </div> 
+
+    <script>
+        let lampadaA = window.document.getElementById('lampadaA');
+        let lampadaB = window.document.getElementById('lampadaB');
+
+        lampadaA.onclick = function (event){
+            event.target.classList.contains('lamapada_on') ? 
+                lampadaA.classList.remove('lampada_on') :
+                lampadaA.classList.add('lampada_on');
+        }
+
+        lampadaB.onclick = function (event){
+            lampadaB.src.includes('lampada_off.jpg') ?
+            lampadaB.src = ("lampada_on.jpg") : 
+            lampadaB.src = ('lampada_off.jpg');
+        }
+    </script>
+</body>
+</html>

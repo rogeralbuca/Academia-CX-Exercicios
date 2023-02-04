@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="canvas" width="280" height="420"></canvas>
+    <img id="desenho" src="animacao.jpg"style="display:none;"/>
+    <script>
+
+        const canvas = document.getElementById("canvas");
+        const imagem = document.getElementById("desenho");
+        const contexto = canvas.getContext("2d");
+
+        function * rodar(){
+            while(true){
+                yield contexto.drawImage(imagem, 0, 0, 137.5, 215, 0, 0, 137.5, 215);
+                yield contexto.drawImage(imagem, 137.5, 0, 137.5, 215, 0, 0, 137.5, 215);
+                yield contexto.drawImage(imagem, 0, 215, 137.5, 215, 0, 0, 137.5, 215);
+                yield contexto.drawImage(imagem, 137.5, 215, 137.5, 215, 0, 0, 137.5, 215);
+            }
+        }
+
+        const desenho = rodar();
+
+        function att() {
+            desenho.next();
+        }
+
+        setInterval(att, 100);
+
+    </script>
+</body>
+</html>
