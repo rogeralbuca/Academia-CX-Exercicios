@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+
+<body>
+    
+    <canvas id="canvas" width="280" height="420"></canvas>
+    <img id="animacao" src="animation.jpg" style="display: none;"/>
+
+    <script>
+
+        const canvas = document.getElementById("canvas");
+        const imagem = document.getElementById("animacao");
+
+        function* correr() {
+            let context = canvas.getContext("2d");
+
+            while(true) {
+                yield context.drawImage(imagem, 0, 0, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 130, 0, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 240, 0, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 350, 0, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 0, 200, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 150, 200, 190, 180, 0, 0, 190, 180);
+                yield context.clearRect(0, 0, 190, 180);
+                yield context.drawImage(imagem, 340, 200, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 0, 375, 190, 180, 0, 0, 190, 180);
+                yield context.clearRect(0, 0, 190, 180);
+                yield context.drawImage(imagem, 186, 375, 130, 180, 0, 0, 130, 180);
+                yield context.drawImage(imagem, 320, 375, 130, 180, 0, 0, 130, 180);
+            }
+        }
+
+        const animacao = correr();
+        
+        function atualizar() {
+            animacao.next();
+        }
+
+        setInterval(atualizar, 75);
+    </script>
+</body>
+
+</html>

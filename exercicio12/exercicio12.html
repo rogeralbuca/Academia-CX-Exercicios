@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+<body>
+    <script>
+        
+        const array = [10, 20, 13, 42, 51, 7, 76, 18, 29, 27];
+
+        let reduce = array.reduce((acumulador, valor) => {
+            valor & 0b1 ? acumulador.impar.push(valor) : acumulador.par.push(valor);
+
+            return acumulador;
+        }, { par: [], impar: [] });
+        
+
+        let filter = array.filter(valor => valor & 0b1 ? valor : null);
+        
+        let map = array.map(valor => valor & 0b1 ? `Impar: ${valor}` : `Par: ${valor}`);
+
+        let total = array.reduce((acumulador, valor) => acumulador += valor);
+        
+        console.log("Reduce:", reduce);
+        console.log("Filter:", filter);
+        console.log("Map:", map);
+        console.log("Total:", total);
+
+    </script>
+</body>
+</html>
