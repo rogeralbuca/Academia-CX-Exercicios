@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        margin: 0 auto;
+        width: 60vw;
+        justify-content: space-around;
+      }
+
+      .lampada {
+        width: 50px;
+        height: 50px;
+        background-image: url(./imagens/lampada.jpg);
+        background-size: cover;
+      }
+
+      .lampada-on {
+        background-image: url(./imagens/lampadaon.jpg);
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+      }
+
+      .lampada-img {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="lampada" id="lamp1"></div>
+      <div class="lampada" id="lamp2"></div>
+    </div>
+    <script>
+      const lamp1 = document.getElementById('lamp1');
+      const lamp2 = document.getElementById('lamp2');
+
+      lamp1.addEventListener('click', function () {
+        if (lamp1.classList.contains('lampada')) {
+          lamp1.classList.remove('lampada');
+          lamp1.classList.add('lampada-on');
+        } else {
+          lamp1.classList.remove('lampada-on');
+          lamp1.classList.add('lampada');
+        }
+      });
+      lamp2.addEventListener('click', function () {
+        if (lamp2.classList.contains('lampada')) {
+          lamp2.classList.remove('lampada');
+          lamp2.classList.add('lampada-on');
+        } else {
+          lamp2.classList.remove('lampada-on');
+          lamp2.classList.add('lampada');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(especie) {
+          this.especie = especie;
+        }
+
+        caracteristicas(curiosidade) {
+          console.log(
+            `É uma característica de um Animal da espécie ${this.especie}: ${curiosidade}`
+          );
+        }
+      }
+
+      class Mamifero extends Animal {
+        constructor(especie) {
+          super(especie);
+        }
+
+        caracteristicas(curiosidade) {
+          console.log(
+            `É uma característica de um Mamífero da espécie ${this.especie}: ${curiosidade}`
+          );
+        }
+      }
+
+      class Cachorro extends Mamifero {
+        constructor(especie, nome) {
+          super(especie);
+          this.nome = nome;
+        }
+
+        caracteristicas(curiosidade) {
+          console.log(
+            `É uma característica de um Cachoreo da espécie ${this.especie}: ${curiosidade}`
+          );
+        }
+
+        getNome() {
+          console.log(`O Cachorro, seu nome é ${this.nome}`);
+        }
+      }
+
+      const animal = new Animal('Boto-cor-de-rosa');
+      animal.caracteristicas(
+        'Têm nutrição heterotrófica (são incapazes de produzir o seu próprio alimento)'
+      );
+      const cachorro = new Cachorro('Pastor Alemão', 'Rin-Tin-Tin');
+
+      const mamifero = new Mamifero('Lobo-guará');
+      mamifero.caracteristicas(
+        'a presença de pelos, glândulas mamárias, diafragma e dentes diferenciados'
+      );
+      cachorro.caracteristicas(
+        'é um quadrupede(ou seja, anda sobre duas patas)'
+      );
+      cachorro.getNome();
+    </script>
+  </body>
+</html>
