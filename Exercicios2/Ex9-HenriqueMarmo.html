@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let nome = prompt("Digite o seu nome: ");
+        
+        let idade = prompt("Digite a sua idade: ");
+
+        let signo = prompt("Digite o seu signo: ");
+
+        const MAIOR_IDADE = 18;
+
+        function intervaloNascimento(signo){
+            switch(signo){
+                case "Áries":
+                    console.log("Seu intervalo de nascimento: Signo Áries de 21 março a 19 abril");
+                    break;
+                case "Touro":
+                    console.log("Seu intervalo de nascimento: Signo Touro de 20 abril a 20 maio");
+                    break;
+                case "Gêmeos":
+                    console.log("Seu intervalo de nascimento: Signo Gêmeos de 21 maio a 21 junho");
+                    break;
+                case "Câncer":
+                    console.log("Seu intervalo de nascimento: Signo Câncer de 22 junho a 22 julho");
+                    break;
+                case "Leão":
+                    console.log("Seu intervalo de nascimento: Signo Leão de 23 julho a 22 agosto");
+                    break;
+                case "Virgem":
+                    console.log("Seu intervalo de nascimento: Signo Virgem de 23 agosto a 22 setembro");
+                    break;
+                case "Libra":
+                    console.log("Seu intervalo de nascimento: Signo Libra de 23 setembro a 22 outubro");
+                    break;
+                case "Escorpião":
+                    console.log("Seu intervalo de nascimento: Signo Escorpião de 23 outubro a 21 novembro");
+                    break;
+                case "Sagitário":
+                    console.log("Seu intervalo de nascimento: Signo Sagitário de 22 novembro a 21 dezembro");
+                    break;
+                case "Capricórnio":
+                    console.log("Seu intervalo de nascimento: Signo Capricórnio de 22 dezembro a 19 janerio");
+                    break;
+                case "Aquário":
+                    console.log("Seu intervalo de nascimento: Signo Aquário de 20 janeiro a 18 fevereiro");
+                    break;
+                case "Peixes":
+                    console.log("Seu intervalo de nascimento: Signo Peixes de 19 fevereiro a 20 março");
+                    break;
+                default:
+                    console.log(`Seu intervalo de nascimento: Signo ${signo} não registrado`); 
+            }
+        }
+
+        function maioridade(idade){
+            if(idade >= MAIOR_IDADE){
+                console.log(intervaloNascimento(signo));
+            } else{
+                console.log("Somente para maiores de idade");
+            }
+        }
+
+        console.log(`Seja bem-vindo(a) ${nome}`);
+        console.log(maioridade(idade));
+
+    </script>
+</body>
+</html>

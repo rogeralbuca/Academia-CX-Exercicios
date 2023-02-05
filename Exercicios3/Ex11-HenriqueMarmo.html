@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Animal {
+            constructor(especie,caracteristicas){
+                this.especie = especie;
+                this.caracteristicas = caracteristicas;
+            }
+
+            GetCaracteristicas(){
+                return this.especie + " " + this.caracteristicas;
+            }
+        }
+
+        class Mamifero extends Animal{
+        }
+
+        class Cachorro extends Mamifero{
+            getNomeCachorro(){
+                return "O Cachorro, seu nome é Rin-Tin-Tin";
+            }
+        }
+
+        let teste = new Animal("oi",
+        "bebe",
+        "bebe");
+
+        let botoRosa = new Animal(
+            "É uma característica de um Animal da espécie Boto-cor-de-rosa:",
+            "Têm nutrição heterotrófica (são incapazes de produzir o seu próprio alimento)");
+
+        let loboGuara = new Mamifero(
+            "É uma característica de um Mamífero da espécie Lobo-Guará:",
+            "A presença de pelos, glándulas mamária, diafragma e dentes diferenciados");
+
+        let pastorAlemao = new Cachorro(
+            "É uma característica de um Cachorro da espécie Pastor Alemão:",
+            "É quadrúpede (ou seja, ainda sobre quatro patas)");
+
+
+        console.log(botoRosa.GetCaracteristicas());
+        console.log(loboGuara.GetCaracteristicas());
+        console.log(pastorAlemao.GetCaracteristicas());
+        console.log(pastorAlemao.getNomeCachorro());
+    </script>
+</body>
+</html>

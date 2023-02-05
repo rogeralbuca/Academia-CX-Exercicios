@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let array = [10,20,13,42,51,7,76,18,29,27];
+
+        let evenOddReduce = array.reduce((accumulator, currentValue) => {
+            let restTest = currentValue % 2 == 0 ? 'par' : 'impar';
+            accumulator[restTest].push(currentValue);
+            return accumulator;
+        }, { par : [], impar: [] });
+
+        let oddFilter = array.filter(v => v % 2 ? v : null);
+
+        let evenOddMap = array.map(value => value % 2 == 0 ? `Par: ${value}` : `Impar: ${value}`);
+
+        let total = array.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+        console.log("Reduce: ", evenOddReduce);
+        console.log("Filter: ", oddFilter);
+        console.log("Map: ", evenOddMap);
+        console.log("Total: ", total);
+
+    </script>
+</body>
+</html>
