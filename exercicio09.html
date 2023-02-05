@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const MAIOR_IDADE = 18;
+
+      const maioridade = (idade) => {
+        return idade >= MAIOR_IDADE;
+      };
+
+      const obterIntervaloNascimento = (signo) => {
+        signo = signo.toLowerCase();
+        switch (signo) {
+          case 'áries':
+            return 'de 21 de março a 19 de abril';
+            break;
+          case 'touro':
+            return 'de 20 de abril a 20 de maio';
+            break;
+          case 'gêmeos':
+            return 'de 21 de maio a 20 de junho';
+            break;
+          case 'câncer':
+            return 'de 21 de junho a 22 de julho';
+            break;
+          case 'leão':
+            return 'de 23 de julho a 22 de agosto';
+            break;
+          case 'virgem':
+            return 'de 23 de agosto a 22 de setembro';
+            break;
+          case 'libra':
+            return 'de 23 de setembro a 22 de outubro';
+            break;
+          case 'escorpião':
+            return 'de 23 de outubro a 21 de novembro';
+            break;
+          case 'sagitário':
+            return 'de 22 de novembro a 21 de dezembro';
+            break;
+          case 'capricórnio':
+            return 'de 22 de dezembro a 19 de janeiro';
+            break;
+          case 'aquário':
+            return 'de 20 de janeiro a 18 de fevereiro';
+            break;
+          case 'peixes':
+            return 'de 19 de fevereiro a 20 de março';
+            break;
+          default:
+            return 'não registrado';
+            break;
+        }
+      };
+
+      const sistemaSigno = (nome, signo, idade) => {
+        console.log(`Seja bem-vindo ${nome}`);
+        const intervaloDeNascimento = obterIntervaloNascimento(signo);
+
+        maioridade(idade)
+          ? console.log(
+              `Seu intervalo de nascimento: Signo de ${signo.toLowerCase()} ${intervaloDeNascimento}`
+            )
+          : console.log(`Somente para maiores de idade`);
+      };
+
+      sistemaSigno('Fulano', 'ViRGem', 15);
+      sistemaSigno('Ciclano', 'Lobo', 22);
+      sistemaSigno('Beltrano', 'Leão', 25);
+    </script>
+  </body>
+</html>

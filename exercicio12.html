@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const valores = [10, 20, 13, 42, 51, 7, 76, 18, 29, 27];
+
+      const resultReduce = valores.reduce(
+        (acc, curr) => {
+          //   console.log(curr);
+          const chave = curr % 2 === 0 ? 'par' : 'impar';
+          //   console.log(chave);
+
+          acc[chave].push(curr);
+          return acc;
+        },
+        { par: [], impar: [] }
+      );
+
+      const resultFilter = valores.filter((valor) => valor % 2 !== 0);
+
+      const resultMap = valores.map((valor) => {
+        const chave = valor % 2 === 0 ? ' Par ' : ' Impar ';
+        return `${chave}: ${valor}`;
+      });
+
+      const reducerSoma = valores.reduce((acc, curr) => acc + curr, 0);
+
+      console.log(resultReduce);
+
+      console.log('Filter: ' + resultFilter);
+
+      console.log('Map: ' + resultMap);
+
+      console.log('Total: ' + reducerSoma);
+    </script>
+  </body>
+</html>
